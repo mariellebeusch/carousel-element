@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="carousel-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `carousel-element`
+     * Carousel Element um zu testen
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class CarouselElement extends Polymer.Element {
+      static get is() { return 'carousel-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'carousel-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(CarouselElement.is, CarouselElement);
+  </script>
+</dom-module>
